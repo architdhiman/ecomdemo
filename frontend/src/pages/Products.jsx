@@ -1,7 +1,7 @@
 import React from "react";
 import { products } from "../products/data";
 import { useCart } from "../context/cart";
-
+import { NavLink } from "react-router-dom";
 const Products = () => {
   const [cart, setCart] = useCart(); 
   console.log(cart, "cart value is")
@@ -14,6 +14,7 @@ const Products = () => {
   return (
     <div>
       <h1>Products Page</h1>
+      Click on Cart <NavLink to={"/cart"}><button>Cart</button></NavLink>
       <h2>{cart.length}</h2>
       {products.map((item) => {
         return (

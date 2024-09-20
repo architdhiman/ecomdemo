@@ -18,6 +18,7 @@ const Home = () => {
       HomePage <button onClick={handleLogout}>LOGOUT</button>
       <br />      
       Click on Products <NavLink to={"/home/products"}><button>PRODUCTS</button></NavLink>
+      Click on Cart <NavLink to={"/cart"}><button>Cart</button></NavLink>
       <Outlet/>
     </div>
   )

@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Welcome from './pages/Welcome';
 import { PrivateRoutes } from './routes/auth';
 import Products from './pages/Products';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       <Route path='/register' element={<Register/>}></Route>      
       <Route element={<PrivateRoutes />}>
           <Route path="/home" element={<Home />} />
-          <Route path="home/products" element={<Products />} />
-        </Route>
+          <Route path="home/products" element={<Products />} />          
+          <Route path='/cart' element={<Cart/>}></Route>      
+      </Route>
     </Routes>
     </>
   );
